@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/lblHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Home"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="158dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07387141" />
+
+    <TextView
+        android:id="@+id/lblInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Enter location details"
+        android:textStyle="bold|italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnGetLocation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Address"
+        app:layout_constraintBottom_toTopOf="@id/lblLatitude"
+        app:layout_constraintLeft_toLeftOf="@id/lblInput"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblInput"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <TextView
+        android:id="@+id/lblLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Latitude"
+        app:layout_constraintBottom_toTopOf="@id/lblLongitude"
+        app:layout_constraintLeft_toLeftOf="@id/lblCity"
+        app:layout_constraintRight_toRightOf="@id/lblCity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblCity"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <TextView
+        android:id="@+id/lblLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Longitude"
+        app:layout_constraintBottom_toTopOf="@id/guidelineInput"
+        app:layout_constraintLeft_toLeftOf="@id/lblLatitude"
+        app:layout_constraintRight_toRightOf="@id/lblLatitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblLatitude"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <EditText
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toBottomOf="@id/lblCity"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lblCity"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <EditText
+        android:id="@+id/txtLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter latitude"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@id/lblLatitude"
+        app:layout_constraintLeft_toLeftOf="@id/txtCity"
+        app:layout_constraintRight_toRightOf="@id/txtCity"
+        app:layout_constraintTop_toBottomOf="@id/lblLatitude"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <EditText
+        android:id="@+id/txtLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter longitude"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@id/lblLongitude"
+        app:layout_constraintLeft_toLeftOf="@id/txtLatitude"
+        app:layout_constraintRight_toRightOf="@id/txtLatitude"
+        app:layout_constraintTop_toTopOf="@id/lblLongitude"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="159dp" />
+
+    <TextView
+        android:id="@+id/lblDesired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Enter desired settings"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/lblDTemp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineInput"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <TextView
+        android:id="@+id/lblDTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Temperature"
+        app:layout_constraintBottom_toTopOf="@id/lblDHumid"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintLeft_toLeftOf="@id/lblDesired"
+        app:layout_constraintRight_toRightOf="@id/lblDesired"
+        app:layout_constraintTop_toBottomOf="@id/lblDesired" />
+
+    <TextView
+        android:id="@+id/lblDHumid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity"
+        app:layout_constraintTop_toBottomOf="@id/lblDTemp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineDesired"
+        app:layout_constraintLeft_toLeftOf="@id/lblDTemp"
+        app:layout_constraintRight_toRightOf="@id/lblDTemp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <EditText
+        android:id="@+id/txtDTempMin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVertical"
+        app:layout_constraintRight_toLeftOf="@id/lblTo1"
+        app:layout_constraintTop_toTopOf="@id/lblDTemp"
+        app:layout_constraintBottom_toBottomOf="@id/lblDTemp"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <EditText
+        android:id="@+id/txtDHumidMin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="404dp"
+        app:layout_constraintTop_toTopOf="@id/lblDHumid"
+        app:layout_constraintBottom_toBottomOf="@id/lblDHumid"
+        app:layout_constraintLeft_toLeftOf="@id/txtDTempMin"
+        app:layout_constraintRight_toRightOf="@id/txtDTempMin"/>
+
+    <EditText
+        android:id="@+id/txtDTempMax"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintLeft_toRightOf="@id/lblTo1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtDTempMin"
+        app:layout_constraintBottom_toBottomOf="@id/txtDTempMin"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <EditText
+        android:id="@+id/txtDHumidMax"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="406dp"
+        app:layout_constraintBottom_toBottomOf="@id/txtDHumidMin"
+        app:layout_constraintTop_toTopOf="@id/txtDHumidMin"
+        app:layout_constraintLeft_toLeftOf="@id/txtDTempMax"
+        app:layout_constraintRight_toRightOf="@id/txtDTempMax"/>
+
+    <TextView
+        android:id="@+id/lblTo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to"
+        app:layout_constraintLeft_toRightOf="@id/txtDTempMin"
+        app:layout_constraintRight_toLeftOf="@id/txtDTempMax"
+        app:layout_constraintTop_toTopOf="@id/txtDTempMin"
+        app:layout_constraintBottom_toBottomOf="@id/txtDTempMin"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <TextView
+        android:id="@+id/lblTo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to"
+        app:layout_constraintLeft_toRightOf="@id/txtDHumidMin"
+        app:layout_constraintRight_toLeftOf="@id/txtDHumidMax"
+        app:layout_constraintTop_toTopOf="@id/txtDHumidMin"
+        app:layout_constraintBottom_toBottomOf="@id/txtDHumidMin"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineDesired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <Button
+        android:id="@+id/btnGetData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Get weather data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineDesired"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnGetLocation"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="16dp"
+        android:text="Get Location"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtCity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblInput"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
